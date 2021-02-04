@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import "../styles/Main.css"
+import "../styles/Main.scss"
+import rightArrow from '../images/main/icon_right_arrow.png';
 
 class Main extends Component {
     render() {
@@ -13,18 +14,36 @@ class Main extends Component {
                 </div>
                 <ul className="subNav">
                     <li>
-                        <a href="/">회사 소개</a>
+                        <a href="/">회사 소개
+                            <div className="hoverSubNav">
+                                <strong>회사 소개</strong>
+                                <span>COMPANY INTRODUCTION</span>
+                                <img className="arrow" src={rightArrow} alt="arrow" />
+                            </div>
+                        </a>
                     </li>
                     <li>
-                        <a href="/">작품 소개</a>
+                        <a href="/">작품 소개
+                            <div className="hoverSubNav">
+                                <strong>작품 소개</strong>
+                                <span>WORKS INTRODUCTION</span>
+                                <img className="arrow" src={rightArrow} alt="arrow" />
+                            </div>                        
+                        </a>
                     </li>
                     <li>
-                        <a href="/">투고 안내</a>
+                        <a href="/">투고 안내
+                            <div className="hoverSubNav">
+                                <strong>투고 안내</strong>
+                                <span>SUBMISSION GUIDE</span>
+                                <img className="arrow" src={rightArrow} alt="arrow" />
+                            </div>                        
+                        </a>
                     </li>
                 </ul>
             </main>
         )
     }
-}
+}                
 
 export default Main;
