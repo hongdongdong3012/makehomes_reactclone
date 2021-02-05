@@ -13,7 +13,7 @@ p {line-height:1.4;}
 table {border-collapse:collapse; border-spacing:0;}
 input, select {vertical-align:middle; -webkit-appearance: none; -moz-appearance: none; appearance: none; border:1px solid #fff; box-sizing:border-box; background:#fff; vertical-align: bottom;}
 img {width:100%; background-repeat: no-repeat;}
-button {border:none; }
+button {border:none;  cursor: pointer;}
 strong {font-weight:600;}
 span {font-weight: 300;}
 /*===========================================================================
@@ -37,6 +37,7 @@ header {z-index:1000; position:fixed; top:0; left:0; right:0; height:110px; bord
 header .container {display:flex; align-items:center; justify-content:space-between; }
 header .logo {width:170px; margin-right:100px;}
 header .nav {display:flex; align-items:center; }
+header .nav li a.active {color:#327ee4;}
 header .nav li a {display:block; padding:0 20px; font-size:17px; font-weight:600; transition:.4s; color:#fff;}
 header .nav li a:hover {color:#327ee4;}
 header .sns {display:flex; align-items:center;}
@@ -50,8 +51,9 @@ footer p span {font-size:14px; color:#999;}
 /* 메인 */
 main {position:relative;}
 
-#wrap .pc {display:block;}
-#wrap .mobile {display:none;}
+.pc {display:block;}
+.mobile {display:none;}
+.nav.pc, .sns.pc {display:flex;}
 /*===========================================================================
 	common - 반응형
 ============================================================================*/
@@ -59,17 +61,20 @@ main {position:relative;}
 	.container {width:100%; padding:0 15px;}
 }
 
-@media (max-width:768px) {
-	#wrap .pc {display:none;}
-	#wrap .mobile {display:block; margin:0 auto;}
+@media (max-width:1000px) {
+	.pc {display:none;}
+	.nav.pc, .sns.pc {display:none;}
+	.mobile {display:block; margin:0 auto;}
 
-	header {height:72px; background:inherit;}
-	header .menu {width:30px;}
+	
+
+	header {height:70px; background:inherit;}
+	header .menu {width:40px;}
+	header .menu .slideMenu {z-index:1000; position:fixed; width:80%; height:100%; right:0; transition: transform .3s cubic-bezier(0, .52, 0, 1); transform:translate3d(-100vw ,0, 0); top:0; bottom:0; background:#fff;}
+	header .menu .slideMenu .closeBtn {position:absolute; top:10px; left:-40px; width:30px; cursor:pointer;}
+	header .menu .slideMenu ul li {padding:14px 20px;border-bottom:1px solid #eee;}
+	header .menu .slideMenu ul li a {display:block; font-size:15px;}
 	header .logo {width:130px;}
-	header .sub_menu {overflow-x:scroll; border-top: 1px solid rgba(0, 0, 0, 0.05); border-bottom: 1px solid rgba(0, 0, 0, 0.05);}
-	header .sub_menu ul {display:flex; align-items: center; height:40px;}
-	header .sub_menu ul li {margin:0 4px;}
-	header .sub_menu ul li a {font-size:13px; line-height:1;}
 
 
 	/* footer */

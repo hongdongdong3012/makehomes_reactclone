@@ -8,7 +8,7 @@ import trophy from "../images/main/company/company_img04.png"
 class Company extends Component {
     render() {
         return (
-            <main>
+            <main className="companyWrap">
                 <div className="subBanner sub_banner_company">
                     <h3>회사소개</h3>
                 </div>
@@ -100,6 +100,29 @@ class Company extends Component {
                                         <li>무인이곽(우각) 카카오페이지 무협 부문 1위</li>
                                         <li>사신표월(우각) 카카오페이지 무협 부문 1위</li>
                                     </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="companyResolution">
+                            <div className="col">
+                                <div className="left">
+                                    <p>일대일 맞춤형 출간을</p>
+                                    <p>지향합니다.</p>
+                                </div>
+                                <div className="right">
+                                    <p>사람마다 지닌 지문이 다르듯이, 작가님들 또한 개개인이 지닌 고유한 작품의 특성이 있습니다.</p>
+                                    <p>데일리북스는 작가님과 작품의 특성에 맞는 플랫폼을 선별, 출간을 제안합니다.</p>
+                                    <p>또한 작가님이 지향하시는 바를 최우선으로 생각합니다. </p>
+                                </div>
+                            </div>
+                            <div className="col">
+                                <div className="left">
+                                    <p>어디에서든 읽을 수 있습니다.</p>
+                                </div>
+                                <div className="right">
+                                    <p>웹소설, 웹툰의 독자님들이 늘어나면서, 출간 플랫폼 또한 많아지고 있습니다. </p>
+                                    <p>데일리북스는 카카오페이지, 리디북스, 네이버 외 10여 곳의 플랫폼에 작품을 유통합니다.</p>
+                                    <p>어느 플랫폼에서든 데일리북스의 작품을 만나 보세요.</p>
                                 </div>
                             </div>
                         </div>

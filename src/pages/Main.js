@@ -9,6 +9,8 @@ class Main extends Component {
                 <div className="banner">
                     <div className="container">
                         <div className="bannerTxt">
+                            <p>매일매일 보고 싶은</p>
+                            <p>작품을 출간합니다.</p>
                         </div>
                     </div>
                 </div>

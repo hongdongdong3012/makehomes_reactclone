@@ -5,13 +5,18 @@
     background:url('../images/main/banner_01.png') no-repeat 50% 50%;
 
     .bannerTxt {
+        padding-left:20px;
+        border-left:8px solid #364bab;
         position: absolute;
         bottom:20%;
         left:0;
-        width:700px;
-        height:200px;
-        background:url('../images/main/banner_txt_01.png') no-repeat 50% 50%;
         background-size:cover;
+
+        p {
+            font-size:5vw;
+            color:#fff;
+            font-weight:600;
+        }
     }
 }
 
@@ -51,10 +56,12 @@
                     display:block;
                     font-size:24px;
                     margin-bottom: 10px;
+                    color:#fff;
                 }
                 span {
                     opacity:0.8;
                     font-size:15px;
+                    color:#fff;
                 }
                 .arrow {
                     float:right;
@@ -81,7 +88,6 @@
     position:relative;
     height:530px;
     &.sub_banner_company {
-        background:url('../images/main/company/company_banner.png')no-repeat 50% 50%;
         background-size:cover;
     }
     h3 {
@@ -94,122 +100,383 @@
         font-weight:400;
     }
 }
+.companyWrap {
+    .subBanner {
+        &.sub_banner_company {
+            background:url('../images/main/company/company_banner.png')no-repeat 50% 50%;
+        }
+    }
+    .companyIntro {
+        background:url('../images/main/company/company_background.png');
+        background-size:cover;
+        height:100%;
+        padding:90px 0 0;
 
-.companyIntro {
-    background:url('../images/main/company/company_background.png');
-    background-size:cover;
-    height:100%;
-    padding:90px 0 0;
+        .row {
+            padding-bottom:130px;
+            &.row1 {
+                display:flex;
+                align-items: center;
+                justify-content: center;
 
-    .row {
-        padding-bottom:130px;
-        &.row1 {
-            display:flex;
-            align-items: center;
-            justify-content: center;
-
-            img {
-                width:470px;
-            }
-            &>div {
-                padding: 0 20px;
-                &.right {
-                    &>div {
-                        margin-bottom:30px;
-                        p {
-                            font-size:36px;
-                            strong {
-                                color:#364bab;
+                img {
+                    width:470px;
+                }
+                &>div {
+                    padding: 0 20px;
+                    &.right {
+                        &>div {
+                            margin-bottom:30px;
+                            p {
+                                font-size:36px;
+                                strong {
+                                    color:#364bab;
+                                }
+                            }
+                            span {
+                                display:block;
+                                font-size:18px;
+                                line-height:1.4;
                             }
                         }
-                        span {
-                            display:block;
-                            font-size:18px;
-                            line-height:1.4;
+                    }
+                }
+            }
+            &.row2 {
+                text-align:center;
+                &>p {
+                    &:first-child {
+                        font-size:22px;
+                        color:#363636;
+                    }
+                    &:last-child {
+                        font-size:30px;
+                        color:#363636;
+                        strong {
+                            color:#364bab;
+                            font-weight:600;
                         }
+                    }
+                }
+                > img {
+                    width:78px;
+                    margin:34px 0 14px;
+                }
+                h5 {
+                    font-size:26px;
+                    font-weight: 500;
+                    margin-bottom:36px;
+                }
+                .txt {
+                    margin-bottom:30px;
+                    p {
+                        font-size: 18px;
+                        font-weight: 300;
                     }
                 }
             }
         }
-        &.row2 {
-            text-align:center;
-            &>p {
-                &:first-child {
-                    font-size:22px;
-                    color:#363636;
-                }
-                &:last-child {
+    }
+
+    .companyHistory {
+        padding:90px 0;
+        display:flex;
+        justify-content: center;
+        .col {
+            display:flex;
+            width:50%;
+            padding:0 15px;
+            
+            img {
+                display:inline-block;
+                width:70px;
+                margin-right:20px;
+            }
+            .right {
+                h5 {
+                    position:relative;
                     font-size:30px;
-                    color:#363636;
-                    strong {
-                        color:#364bab;
-                        font-weight:600;
+                    font-weight: 400;
+                    padding-bottom: 40px;
+                    &::after {
+                        content:'';
+                        position:absolute;
+                        left:0;
+                        bottom:0;
+                        width:60%;
+                        height:3px;
+                        background:#364bab;
+                    }
+                }
+                ul {
+                    padding:24px 0;
+                    li {
+                        font-size:16px;
+                        line-height:2;
                     }
                 }
             }
-            > img {
-                width:78px;
-                margin:34px 0 14px;
+            &.col1 {
+                justify-content: flex-end;
             }
-            h5 {
-                font-size:26px;
-                font-weight: 500;
-                margin-bottom:36px;
+            &.col2 {
+                
             }
-            .txt {
-                margin-bottom:30px;
+        }
+    }
+
+    .companyResolution {
+        padding:90px 0;
+        width:1200px;
+        margin:0 auto;
+        .col {
+            display:flex;
+            align-items: flex-start;
+            .left {
+                width:380px;
                 p {
-                    font-size: 18px;
-                    font-weight: 300;
+                    font-size:30px;
+                    color:#364bab;
+                }
+            }
+            .right {
+                p {
+                    font-size:18px;
+                    padding-left:30px;
+                    border-left:1px solid #cccccc;
+                }
+            }
+            &:first-child {
+                margin-bottom:60px;
+            }
+        }
+    }
+}
+
+.workWrap {
+    .subBanner {
+        &.sub_banner_company {
+            background:url('../images/main/work/work_banner.jpg')no-repeat 50% 50%;
+        }
+    }
+    .container {
+        width:1250px;
+        .workNav {
+            position:absolute;
+            top:-57px;
+            width:100%;
+
+            display:flex;
+            li {
+                width:20%;
+                display:block;
+                padding:20px 2px;
+                text-align: center;
+                background: rgba(0, 0, 0, 0.3);
+                border-color: rgba(208, 208, 208, 0);
+                transition:0.3s;
+                color:#fff;
+                font-size:17px;
+                cursor: pointer;
+                &.active {
+                    background:#364bab;
+                }
+                &:hover {
+                    color:#363636;
+                    background:#fff;
+                }
+            }
+        }
+        .workContents {
+            padding:100px 0;
+            ul {
+                display:flex;
+                flex-wrap:wrap;
+                li {
+                    position:relative;
+                    width:calc((100% / 3) - 10px);
+                    height:570px;
+                    margin:5px;
+                    background-size:cover !important;
+
+                    img {
+                        height:100%;
+                    }
+                    .contentsHover  {
+                        opacity:0;
+                        position:absolute;
+                        top:0;
+                        left:0;
+                        width:100%;
+                        height:100%;
+                        background:rgba(0,0,0,0.7);
+                        transition:.4s;
+
+                        .contentsTxt {
+                            position:absolute;
+                            top:50%;
+                            left:50%;
+                            transform:translate(-50%, -50%);
+                            width: 100%;
+                            text-align: center;
+                            p {
+                                color:#fff;
+                                font-size:24px;
+                                margin-bottom:10px;
+                            }
+                            span {
+                                display:block;
+                                color:#999;
+                                font-size:20px;
+                            }
+                        }
+                    }
+                    &:hover {
+                        .contentsHover {
+                            opacity:1;
+                        }
+                    }
                 }
             }
         }
     }
 }
 
-.companyHistory {
-    padding:90px 0;
-    display:flex;
-    justify-content: center;
-    .col {
-        display:flex;
-        width:50%;
-        padding:0 15px;
-        
-        img {
-            display:inline-block;
-            width:70px;
-            margin-right:20px;
+.submissionWrap {
+    .subBanner {
+        &.sub_banner_submission {
+            background:url('../images/main/submission/submission_banner.jpg')no-repeat 50% 50%;
         }
-        .right {
+    }
+    .container {
+        width:1250px;
+        .booksInfo {
+            padding:90px 0;
+            text-align: center;
+            > img {
+                width:78px;
+            }
+            h3 {
+                font-size:40px;
+                margin: 20px 0 50px;
+            }
             h5 {
-                position:relative;
-                font-size:30px;
-                font-weight: 400;
-                padding-bottom: 40px;
-                &::after {
-                    content:'';
-                    position:absolute;
-                    left:0;
-                    bottom:0;
-                    width:60%;
-                    height:3px;
-                    background:#364bab;
-                }
+                font-size:20px;
+                margin-bottom:14px;
             }
-            ul {
-                padding:24px 0;
+            p {
+                font-size:18px; 
+                line-height:2;
+            }
+            .boosWay {
+                padding:90px 0 20px;
+                display:flex;
+                justify-content: space-between;
+                    
                 li {
-                    font-size:16px;
-                    line-height:2;
+                    h4 {
+                        font-size:26px;
+                        font-weight:600;
+                        margin-bottom:20px;
+                    }
+                    .group {
+                        width:600px;
+                        height:343px;
+                        background:url('../images/main/submission/submission_background.png') no-repeat 50% 50%;
+                        background-size:cover;
+                        border-top:4px solid #364bab;
+                        
+                        .col {
+                            padding:20px 40px;
+                            .left {
+                                width:30%;
+                            }
+                        }
+                    }
+                    &.leftCont {
+                        text-align: left;
+                        .group {
+                            display:block;
+                            .col {
+                                width:100%;
+                                display:flex;
+                                align-items: center;
+    
+                                img {
+                                    width:70px;
+                                }
+                            }
+                        }
+                    }
+                    &.rightCont {
+                        text-align: left;
+    
+                        .group {
+                            display:flex;
+                            justify-content: center;
+                            align-items: center;
+                            .txt {
+                                h5 {
+                                    font-size:30px;
+                                    margin-bottom:30px;
+                                }
+                                p {
+                                    text-align: center;
+                                    font-size:15px;
+                                    color:#364bab;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .importTxt {
+                p {
+                    text-align: left;
+                    font-size:14px;
+                    line-height:1.5;
+                    color:#364bab;
+                }
+                button {
+                    margin-top:60px;
+                    padding:15px 60px;
+                    color:#fff;
+                    background:#212121;
+                    transition: 0.4s;
+                    font-size:20px;
+
+                    &:hover {
+                        background:#364bab;
+                    }
                 }
             }
         }
-        &.col1 {
-            justify-content: flex-end;
+    }
+}
+
+@media (max-width:1000px) {
+    .subNav {
+        height: 100px;
+        li {
+            a {
+                font-size:18px;
+                line-height:100px;
+
+                .hoverSubNav {
+                    display:none;
+                }
+            }
         }
-        &.col2 {
-            
+    }
+
+    .banner {
+        .bannerTxt {
+            left:15px;
+            bottom: 160px;
+            padding-left:10px;
+            p {
+                font-size: 9vw;
+            }
         }
     }
 }
