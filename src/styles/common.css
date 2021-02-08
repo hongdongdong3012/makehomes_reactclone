@@ -69,8 +69,10 @@ main {position:relative;}
 	
 
 	header {height:70px; background:inherit;}
-	header .menu {width:40px;}
-	header .menu .slideMenu {z-index:1000; position:fixed; width:80%; height:100%; right:0; transition: transform .3s cubic-bezier(0, .52, 0, 1); transform:translate3d(-100vw ,0, 0); top:0; bottom:0; background:#fff;}
+	header .menu {width:40px; margin:0;}
+	header .menu .slideMenu {z-index:1000; position:fixed; width:80%; height:100%; right:0; transition: .4s;  top:0; bottom:0; background:#fff;}
+	header .menu .slideMenu.hide {transform:translate3d(100vw ,0, 0);}
+	header .menu .slideMenu.show {transform:translate3d(0vw ,0, 0);}
 	header .menu .slideMenu .closeBtn {position:absolute; top:10px; left:-40px; width:30px; cursor:pointer;}
 	header .menu .slideMenu ul li {padding:14px 20px;border-bottom:1px solid #eee;}
 	header .menu .slideMenu ul li a {display:block; font-size:15px;}

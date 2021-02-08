@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
-//import logo from '../images/logo.png';
-import menu from '../images/icon_menu.svg';
-import close from '../images/icon_close_w.svg';
-import logoWhite from '../images/logo_w.png';
-import instagram from '../images/icon_instagram.svg';
-import twitter from '../images/icon_twitter.svg';
 import Home from '../pages/Main';
 import Company from '../pages/Company';
 import Work from '../pages/Work';
 import Submission from '../pages/Submission';
-import NotFound from '../pages/NotFound'
+import NotFound from '../pages/NotFound';
+import Menu from './Menu';
+
+//import logo from '../images/logo.png';
+import menu from '../images/icon_menu.svg';
+import logoWhite from '../images/logo_w.png';
+import instagram from '../images/icon_instagram.svg';
+import twitter from '../images/icon_twitter.svg';
 
 import { Link, Route, Switch, BrowserRouter as Router } from "react-router-dom";
 
@@ -19,11 +20,26 @@ class Header extends Component {
 
         this.state = {
             num : 0,
+            visible: false
         }
+
+        this.toggleMenu = this.toggleMenu.bind(this)
+        this.handleMouseDown = this.handleMouseDown.bind(this)
     }
 
     changeClass(idx) {
         this.setState({num : idx})
+    }
+
+    toggleMenu() {
+        this.setState({
+            visible : !this.state.visible
+        })
+    }
+    handleMouseDown(e) {
+        this.toggleMenu();
+        console.log('clicked');
+        e.stopPropagation()
     }
 
     render() {
@@ -43,16 +59,10 @@ class Header extends Component {
                             <li><a href="/"><img src={instagram} alt="instagram" /></a></li>
                             <li><a href="/"><img src={twitter} alt="twiiter" /></a></li>
                         </ul>
-                        <div className="menu">
-                            <img src={menu} alt="메뉴" />
-                            <div className="slideMenu">
-                                <img className="closeBtn" src={close} alt="close button" />
-                                <ul>
-                                    <li><a href="/">회사 소개</a></li>
-                                    <li><a href="/">작품 소개</a></li>
-                                    <li><a href="/">투고 안내</a></li>
-                                </ul>
-                            </div>
+                        <div className="mobile menu">
+                            <img onMouseDown={this.handleMouseDown} src={menu} alt="메뉴" />
+                            <Menu handleMouseDown={this.handleMouseDown}
+                                menuVisibility={this.state.visible}/>
                         </div>
                     </div>
                 </header> 
