@@ -488,6 +488,12 @@
             width: 100%;
         }
     }
+
+    .submissionWrap {
+        .container {
+            width:100%;
+        }
+    }
 }
 
 @media (max-width: 1200px) {
@@ -628,4 +634,56 @@
         }
     }
 
+    .submissionWrap {
+        .container {
+            .booksInfo {
+                h3 {
+                    font-size:26px;
+                }
+                h5 {
+                    font-size:15px;
+                    &:first-child {
+                        margin-bottom:0;
+                    }
+                }
+                .boosWay {
+                    display:block; 
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .submissionWrap {
+        .container {
+            .booksInfo {
+                .boosWay {
+                    li {
+                        margin-bottom:40px;
+                        .group {
+                            width:100%;
+                            height:393px;
+                            padding:20px 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .workWrap {
+        .container {
+            .workContents {
+                ul {
+                    li {
+                        width:100%;
+                        margin:0;
+                    }
+                }
+            }
+        }
+    }
 }

@@ -16,7 +16,9 @@ class Submission extends Component {
                         <div className="booksInfo">
                             <img src={books} alt="book illust" />
                             <h3>데일리북스 투고안내</h3>
-                            <h5>데일리북스는 판타지, 무협, 로맨스 등의 장르소설 작품을 투고 받습니다.</h5>
+                            <h5 class="pc">데일리북스는 판타지, 무협, 로맨스 등의 장르소설 작품을 투고 받습니다.</h5>
+                            <h5 class="mobile">데일리북스는 판타지, 무협, 로맨스 등의 </h5>
+                            <h5 class="mobile">장르소설 작품을 투고 받습니다.</h5>
                             <p>평소 장르소설에 관심은 많았으니 시도해보지 못하셨던 분들, 내 작품을 널리 알렸으면 하시는 분들은 저희 데일리 북스에 언제든 투고해주시길 바랍니다.</p>
                             <p>많은 관심 부탁드립니다.</p>
                             <ul className="boosWay">
