@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "../styles/Main.scss"
 import rightArrow from '../images/main/icon_right_arrow.png';
+import { Link } from "react-router-dom";
 
 class Main extends Component {
     render() {
@@ -16,31 +17,31 @@ class Main extends Component {
                 </div>
                 <ul className="subNav">
                     <li>
-                        <a href="/">회사 소개
+                        <Link to="/company">회사 소개
                             <div className="hoverSubNav">
                                 <strong>회사 소개</strong>
                                 <span>COMPANY INTRODUCTION</span>
                                 <img className="arrow" src={rightArrow} alt="arrow" />
                             </div>
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="/">작품 소개
+                        <Link to="/work">작품 소개
                             <div className="hoverSubNav">
                                 <strong>작품 소개</strong>
                                 <span>WORKS INTRODUCTION</span>
                                 <img className="arrow" src={rightArrow} alt="arrow" />
                             </div>                        
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="/">투고 안내
+                        <Link to="/submission">투고 안내
                             <div className="hoverSubNav">
                                 <strong>투고 안내</strong>
                                 <span>SUBMISSION GUIDE</span>
                                 <img className="arrow" src={rightArrow} alt="arrow" />
                             </div>                        
-                        </a>
+                        </Link>
                     </li>
                 </ul>
             </main>

@@ -686,4 +686,28 @@
             }
         }
     }
+    .submissionWrap {
+        .container {
+            .booksInfo {
+                .boosWay {
+                    li {
+                        .group {
+                            .col {
+                                padding:20px 10px;
+                            }
+                        }
+                        &.rightCont {
+                            .group {
+                                .txt {
+                                    h5 {
+                                        font-size:24px;
+                                    }
+                                }
+                            }  
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
